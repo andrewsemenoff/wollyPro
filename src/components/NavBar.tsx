@@ -11,10 +11,12 @@ import { Link } from 'react-router-dom';
 import { categories } from '../utils/constants';
 
 const NavBarContainer = styled.div`
+    position: fixed;
     display: grid;
     grid-template-columns: minmax(300px, 1fr)  minmax(1024px, 1fr) 1fr;
     grid-template-rows:  minmax(90px, auto) minmax(87px, auto);
     background-color: #d5ccd3;
+    z-index: 5;
 `
 const SearchBtn = styled(SvgSearchIcon)`
     color: #91959C;
