@@ -7,6 +7,8 @@ import Notification from './Notification';
 import Shopping from './Shopping';
 import LogoImage from '../images/Logo.png';
 import ProfileDropMenu from './PofileDropMenu';
+import { Link } from 'react-router-dom';
+import { categories } from '../utils/constants';
 
 const NavBarContainer = styled.div`
     display: grid;
@@ -86,11 +88,17 @@ const TextSearchInput = styled.input`
     color: #91959C;
   }
   `
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.125em;
+    font-size: 1.12em;
+    text-decoration: none;
+    color: #704575;
     &:hover{
         cursor: pointer;
+        color: #190e1a;
+    }
+    &:focus{
+        color: #EA4680;
     }
 `
 const Tools = styled.div`
@@ -127,13 +135,10 @@ const NavBar = () => {
                 <Shopping />
             </Tools>
             <Menu>
-                <MenuItem >Necklaces</MenuItem>
-                <MenuItem>Pendants</MenuItem>
-                <MenuItem>Chains</MenuItem>
-                <MenuItem>Gold Rings</MenuItem>
-                <MenuItem>Men's Rings</MenuItem>
-                <MenuItem>Kid's Jewellery</MenuItem>
-                <MenuItem>Fashion Rings</MenuItem>
+                <MenuItem to='/Main'>Main</MenuItem>
+                {categories.map(i => 
+                <MenuItem to= {`Gallery/${i.url}`}>{i.name}</MenuItem>
+                )}
             </Menu>
         </NavBarContainer>
     )

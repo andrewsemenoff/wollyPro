@@ -27,15 +27,21 @@ export const AuthorsArr = [
 ]
 
 export const productsArr = [
-    {name: 'Earrings', images: [Cabochon_Fassungs162], price: 700, notation: 'Gold, Brilliant', jevelParts: [part1, part2, part3, part4], authorID: 124},
-    {name: 'Friendship Ring', images: [Ring_165, untitled_177, untitled_178, untitled_179, untitled_180, untitled_181, untitled_182], price: 230, notation: 'Silver, Gold plated, rose Turmaline', jevelParts: [part1, part2, part3, part4], authorID: 123}, 
-    {name: '4 Stones Earrings', images: [FourStones], price: 550, notation: 'Gold, colored glas stones'},
-    {name: '2 Stones Earrings', images: [TwoStones], price: 450, notation: 'Gold, colored glas stones'},
-    {name: '3 Stones Ring', images: [ThreeStones], price: 450, notation: 'Gold, Granat stone'},
-    // {name: 'Spiral Earrings', image: Cabochon_Fassungs154, price: 130, notation: 'Silver, Gold plated'},
-    {name: 'Earrings', images: [Cabochon_Fassungs159], price: 850, notation: 'Gold, Aquamarine'},
-    {name: 'Friendship Ring', images: [Ring_163], price: 530, notation: 'Gold, Brilliant'},   
-    // {name: 'Friendship Ring', image: Cabochon_Fassungs153, price: 530, notation: 'Gold, Brilliant'},
-    // {name: 'Friendship Ring', image: Cabochon_Fassungs156, price: 530, notation: 'Gold, Brilliant'}, 
-    // {name: 'Friendship Ring', image: Cabochon_Fassungs158, price: 530, notation: 'Gold, Brilliant'}, 
+    {name: 'Earrings', category: 'Necklaces', images: [Cabochon_Fassungs162], price: 700, notation: 'Gold, Brilliant', jevelParts: [part1, part2, part3, part4], authorID: 124},
+    {name: 'Friendship Ring', category: 'Pendants', images: [Ring_165, untitled_177, untitled_178, untitled_179, untitled_180, untitled_181, untitled_182], price: 230, notation: 'Silver, Gold plated, rose Turmaline', jevelParts: [part1, part2, part3, part4], authorID: 123}, 
+    {name: '4 Stones Earrings', category: 'Pendants', images: [FourStones], price: 550, notation: 'Gold, colored glas stones'},
+    {name: '2 Stones Earrings', category: 'Necklaces', images: [TwoStones], price: 450, notation: 'Gold, colored glas stones'},
+    {name: '3 Stones Ring', category: 'Pendants', images: [ThreeStones], price: 450, notation: 'Gold, Granat stone'},
+    {name: 'Earrings', category: 'MensRings', images: [Cabochon_Fassungs159], price: 850, notation: 'Gold, Aquamarine'},
+    {name: 'Friendship Ring', category: 'MensRings', images: [Ring_163], price: 530, notation: 'Gold, Brilliant'},   
+];
+
+export const categories = [
+    {url: 'Necklaces', name: 'Necklaces'},
+    {url: 'Pendants', name: 'Pendants'},
+    {url: 'Chains', name: 'Chains'},
+    {url: 'GoldRings', name: 'Gold Rings'},
+    {url: 'MensRings', name: `Men's Rings`},
+    {url: 'KidsJewellery', name: `Kid's Jewellery`},
+    {url: 'FashionRings', name: 'Fashion Rings'},
 ];

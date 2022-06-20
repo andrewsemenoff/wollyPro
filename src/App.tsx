@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Gallery from './components/Gallery';
@@ -9,11 +10,13 @@ import ProductConstructor from './components/ProductConstructor';
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      {/* <MainPage/> */}
-      <ProductConstructor/>
-      {/* <Gallery/> */}
-      <Footer/>
+      <NavBar />
+      <Routes>
+       <Route path='/Main' element = {<MainPage/>} />
+       <Route path='/ProductConstructor' element = {<ProductConstructor />} />
+       <Route path='/Gallery/:category' element = {<Gallery/>}/>
+      </Routes>
+      <Footer />
     </div>
   );
 }

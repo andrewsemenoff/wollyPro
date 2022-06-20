@@ -6,13 +6,14 @@ interface StyleProps {
 }
 
 const MainPageWrapper = styled.div`
-  width: 100%;
+  /* width: 100%; */
    display: flex;
 `
 const Background = styled.img`
-width: 100%;
-height: 100%;
-  background-image: url(${(props: StyleProps) => props.src});
+background-position: 550 300;
+/* width: 100%; */
+/* height: 100%; */
+  /* background-image: url(${(props: StyleProps) => props.src}); */
 `
 
 const MainPage = () => {

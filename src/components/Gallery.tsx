@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ProductItem from './ProductItem';
 import { productsArr } from '../utils/constants';
+import { useParams } from 'react-router-dom';
 
 
 const GalleryContainer = styled.div`
@@ -10,11 +11,11 @@ const GalleryContainer = styled.div`
     width: 60% ;
     height: 100vh ;
     overflow-y: scroll;
-  
+
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
-    place-items: center;
-    gap: 20px;
+    grid-template-rows: minmax(300px, 300px);
+    gap: 30px;
     &::-webkit-scrollbar{
         width: 0.6vw;
     }
@@ -32,9 +33,10 @@ const GalleryContainer = styled.div`
 `
 
 const Gallery = () => {
+    const {category} = useParams();
     return (
         <GalleryContainer>
-           {productsArr.map((p, index) => <ProductItem product = {p} key={index}/>)} 
+           {productsArr.filter(p => p.category === category).map((p, index) => <ProductItem product = {p} key={index}/>)} 
         </GalleryContainer>
     )
 }
