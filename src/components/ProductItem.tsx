@@ -1,9 +1,10 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom';
 import styled, { css, keyframes } from 'styled-components'
 import { productsArr } from '../utils/constants';
 
 interface ProductItemProps {
-    product: { name: string, images: string[], notation?: string, price?: number },
+    product: {id: number, name: string, images: string[], notation?: string, jevelParts: string[], price?: number },
 }
 interface ItemProps {
     image: string;
@@ -32,7 +33,6 @@ const Item = styled.div<ItemProps>(({ image }) => `
     }
 
 `);
-
 const ProductTitle = styled.div`
     text-align: left;
     color: #FEFEFE;
@@ -54,8 +54,9 @@ const ProductPrice = styled.div`
 
 
 const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
+    const navigate = useNavigate();
     return (
-        <Item image={product.images[0]}>
+        <Item image={product.images[0]} onClick = {()=> navigate(`/ProductConstructor/product/${product.id}`)}>
             <ProductTitle>{product.name}</ProductTitle>
             <ProductNotation>{product.notation}</ProductNotation>
             <ProductPrice>{`$ ${product.price}`}</ProductPrice>

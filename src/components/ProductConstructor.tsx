@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components'
-import SvgBasketReview from '../iconComponents/BasketReview';
 import { productsArr } from '../utils/constants'
 import AuthorBar from './AuthorBar';
 import JewelPart from './JewelPart';
@@ -30,17 +30,22 @@ const SlideGalleryWrapper = styled.div`
 `
 
 const ProductConstructor = () => {
-    const { jevelParts } = productsArr[1];
-
+    const { productID } = useParams()
+    const  currentProduct = productsArr.find(p => p.id === Number(productID))
+    const { jevelParts, authorID } = currentProduct!;
     return (
         <Container>
             <ComponentsBar>
-                {jevelParts!.map((p, index) => <JewelPart image={p} key={index} />)}
+                {jevelParts!.map((p, index) =>
+                    <JewelPart
+                        image={p}
+                        key={index}
+                    />)}
             </ComponentsBar>
             <SlideGalleryWrapper>
                 <SlideGallery />
             </SlideGalleryWrapper>
-            <AuthorBar authorId={productsArr[1].authorID} />
+            <AuthorBar authorId={authorID} />
         </Container>
     )
 }

@@ -41,7 +41,7 @@ const author = AuthorsArr[authorIndex];
   return (
     <Bar>
         <Ava image ={author.image}/>
-        <AuthorName>{author.FirstName} {author.LastName}</AuthorName>
+        <AuthorName>{author.firstName} {author.lastName}</AuthorName>
         <Raiting rating={author.rating}/>
         <Text>{author.text}</Text>
     </Bar>

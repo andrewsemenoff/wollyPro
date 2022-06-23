@@ -95,9 +95,11 @@ const MenuItem = styled(Link)`
     font-size: 1.12em;
     text-decoration: none;
     color: #704575;
+    transition: all .1s ease-in-out;;
     &:hover{
         cursor: pointer;
         color: #190e1a;
+        transform: scale(1.1);
     }
     &:focus{
         color: #EA4680;
@@ -105,7 +107,7 @@ const MenuItem = styled(Link)`
 `
 const Tools = styled.div`
     margin: auto;
-    margin-bottom: 0.5em;
+    margin-top: .5em;
     min-width: 120px;
     max-width: 130px;
     display: flex;
@@ -138,8 +140,11 @@ const NavBar = () => {
             </Tools>
             <Menu>
                 <MenuItem to='/Main'>Main</MenuItem>
-                {categories.map(i => 
-                <MenuItem to= {`Gallery/${i.url}`}>{i.name}</MenuItem>
+                {categories.map((i, index) =>
+                    <MenuItem
+                        to={`Gallery/${i.url}`}
+                        key={index}>{i.name}
+                    </MenuItem>
                 )}
             </Menu>
         </NavBarContainer>
