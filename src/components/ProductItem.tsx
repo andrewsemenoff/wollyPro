@@ -4,7 +4,13 @@ import styled, { css, keyframes } from 'styled-components'
 import { productsArr } from '../utils/constants';
 
 interface ProductItemProps {
-    product: {id: number, name: string, images: string[], notation?: string, jevelParts: string[], price?: number },
+    product: {
+        id: number, 
+        name: string, 
+        images: string[], 
+        notation?: string, 
+        jevelParts: string[], 
+        price?: number },
 }
 interface ItemProps {
     image: string;
@@ -24,8 +30,9 @@ const Item = styled.div<ItemProps>(({ image }) => `
     background-image: url(${image});
     background-size: auto 100% ;
     background-position: center center;
-   
+    transition: all .1s ease-in-out;
     &:hover{
+        cursor: pointer ;
         transform: scale(1.1);
     } 
     &:hover > div{

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import SvgBasketReview from '../iconComponents/BasketReview';
 import SvgGiftcard from '../iconComponents/GiftCard';
@@ -88,11 +89,12 @@ const CogWheel = styled(SvgSettings)`
       cursor: pointer;
     }
 `
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
   display: flex;
   gap: 1em;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
   font-size: 1em;
   color: #707070;
   &:hover{
@@ -104,12 +106,12 @@ const MenuItem = styled.div`
 const ProfileMenu = () => {
   return (
     <Container>
-      <MenuItem><UserIcon />My profile</MenuItem>
+      <MenuItem  to= {`/Profile`}><UserIcon />My profile</MenuItem>
       <Line />
-      <MenuItem><GiftButton /> Gift</MenuItem>
-      <MenuItem><Message /> Messages</MenuItem>
-      <MenuItem><Basket /> purchases</MenuItem>
-      <MenuItem><CogWheel /> Settings</MenuItem>
+      <MenuItem to= {`/Profile`}><GiftButton /> Gift</MenuItem>
+      <MenuItem to= {`/Messages`}><Message /> Messages</MenuItem>
+      <MenuItem to= {`/Profile`}><Basket /> purchases</MenuItem>
+      <MenuItem to= {`/Profile`}><CogWheel /> Settings</MenuItem>
       <Line />
       <StartToSellButton>Start to Sell</StartToSellButton>
     </Container>

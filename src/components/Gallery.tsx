@@ -6,37 +6,55 @@ import { useParams } from 'react-router-dom';
 
 
 const GalleryContainer = styled.div`
-    padding: 20px 0;
+    padding: 1.5em;
     margin: 0 auto;
     width: 60% ;
     height: 100vh ;
-    overflow-y: scroll;
+    
 
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-template-rows: minmax(300px, 300px);
-    gap: 30px;
-    &::-webkit-scrollbar{
-        width: 0.6vw;
+    gap: 1.5em;
+
+    transition: all 1s ease-out;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 1em;
     }
-    &::-webkit-scrollbar-thumb{
-        background-color: #d4b4d6;
-        border-radius: 0.4vw;
-    }
-    &::-webkit-scrollbar-thumb:hover{
-        background-color:#B287B6;
-    }
-    &::-webkit-scrollbar-track{
-        background-color: #F2E6F3;
-        border-radius: 0.3vw;
-    }
+    &:hover {
+        background-color:#F2E6F3;
+        transition: background-color 1s ease-out;
+        &::-webkit-scrollbar {
+            width: 1em;
+            background-color:  #F2E6F3;
+            
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(0,0,0,.2);
+            border-radius: .5em;
+        }
+        &::-webkit-scrollbar-button {
+            background-color: transparent;
+            height: .1em ;
+        }
+}
 `
 
 const Gallery = () => {
-    const {category} = useParams();
+    const { category } = useParams();
     return (
         <GalleryContainer>
-           {productsArr.filter(p => p.category === category).map((p, index) => <ProductItem product = {p} key={index}/>)} 
+            {productsArr
+                .filter(p => p.category === category)
+                .map((p, index) =>
+                    <ProductItem
+                        product={p}
+                        key={index}
+                    />
+                )
+            }
         </GalleryContainer>
     )
 }

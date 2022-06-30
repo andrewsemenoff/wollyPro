@@ -59,6 +59,30 @@ export const productsArr = [
     productFactory(405, '3 Stones Ring', 'Pendants', [ThreeStones], 450, 'Gold, Granat stone', [part1, part2, part3, part4], 127),
     productFactory(406, 'Earrings', 'MensRings', [Cabochon_Fassungs159], 850, 'Gold, Aquamarine', [part1, part2, part3, part4], 128),
     productFactory(407, 'Friendship Ring', 'MensRings', [Ring_163], 530, 'Gold, Brilliant', [part1, part2, part3, part4], 129),   
+   
+    productFactory(400, 'Earrings', 'Necklaces', [Cabochon_Fassungs162], 700, 'Gold, Brilliant', [part1, part2, part3, part4], 123),
+    productFactory(401, 'Friendship Ring', 'Pendants', [Ring_165, untitled_177, untitled_178, untitled_179, untitled_180, untitled_181, untitled_182], 230, 'Silver, Gold plated, rose Turmaline', [part1, part2, part3, part4], 124),
+    productFactory(403, '4 Stones Earrings', 'Pendants', [FourStones], 550, 'Gold, colored glas stones', [part1, part2, part3, part4], 125),
+    productFactory(404, '2 Stones Earrings', 'Necklaces', [TwoStones], 450, 'Gold, colored glas stones', [part1, part2, part3, part4], 126),
+    productFactory(405, '3 Stones Ring', 'Pendants', [ThreeStones], 450, 'Gold, Granat stone', [part1, part2, part3, part4], 127),
+    productFactory(406, 'Earrings', 'MensRings', [Cabochon_Fassungs159], 850, 'Gold, Aquamarine', [part1, part2, part3, part4], 128),
+    productFactory(407, 'Friendship Ring', 'MensRings', [Ring_163], 530, 'Gold, Brilliant', [part1, part2, part3, part4], 129),   
+    
+    productFactory(400, 'Earrings', 'Necklaces', [Cabochon_Fassungs162], 700, 'Gold, Brilliant', [part1, part2, part3, part4], 123),
+    productFactory(401, 'Friendship Ring', 'Pendants', [Ring_165, untitled_177, untitled_178, untitled_179, untitled_180, untitled_181, untitled_182], 230, 'Silver, Gold plated, rose Turmaline', [part1, part2, part3, part4], 124),
+    productFactory(403, '4 Stones Earrings', 'Pendants', [FourStones], 550, 'Gold, colored glas stones', [part1, part2, part3, part4], 125),
+    productFactory(404, '2 Stones Earrings', 'Necklaces', [TwoStones], 450, 'Gold, colored glas stones', [part1, part2, part3, part4], 126),
+    productFactory(405, '3 Stones Ring', 'Pendants', [ThreeStones], 450, 'Gold, Granat stone', [part1, part2, part3, part4], 127),
+    productFactory(406, 'Earrings', 'MensRings', [Cabochon_Fassungs159], 850, 'Gold, Aquamarine', [part1, part2, part3, part4], 128),
+    productFactory(407, 'Friendship Ring', 'MensRings', [Ring_163], 530, 'Gold, Brilliant', [part1, part2, part3, part4], 129),   
+   
+    productFactory(400, 'Earrings', 'Necklaces', [Cabochon_Fassungs162], 700, 'Gold, Brilliant', [part1, part2, part3, part4], 123),
+    productFactory(401, 'Friendship Ring', 'Pendants', [Ring_165, untitled_177, untitled_178, untitled_179, untitled_180, untitled_181, untitled_182], 230, 'Silver, Gold plated, rose Turmaline', [part1, part2, part3, part4], 124),
+    productFactory(403, '4 Stones Earrings', 'Pendants', [FourStones], 550, 'Gold, colored glas stones', [part1, part2, part3, part4], 125),
+    productFactory(404, '2 Stones Earrings', 'Necklaces', [TwoStones], 450, 'Gold, colored glas stones', [part1, part2, part3, part4], 126),
+    productFactory(405, '3 Stones Ring', 'Pendants', [ThreeStones], 450, 'Gold, Granat stone', [part1, part2, part3, part4], 127),
+    productFactory(406, 'Earrings', 'MensRings', [Cabochon_Fassungs159], 850, 'Gold, Aquamarine', [part1, part2, part3, part4], 128),
+    productFactory(407, 'Friendship Ring', 'MensRings', [Ring_163], 530, 'Gold, Brilliant', [part1, part2, part3, part4], 129),   
 ];
 
 export const categories = [

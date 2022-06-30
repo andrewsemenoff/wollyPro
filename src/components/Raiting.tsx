@@ -11,6 +11,7 @@ interface StarProps{
 
 const Star = styled(SvgStar)<StarProps>(({ fill }) =>`
 fill: ${fill ?? 'none'};
+width: 1em;
 color: #EA468059;
 `);
 const StarsBand = styled.div`
