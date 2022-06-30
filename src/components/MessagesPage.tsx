@@ -31,7 +31,7 @@ const SideNavBar = styled.div`
     padding: 1em;
 `
 const Wrapper = styled.div`
-    margin: 0 auto;
+    margin: 1em auto;
     width: 80% ;
     display: flex ;
     margin-bottom: 2em;
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
 
 const MessagesPage = () => {
     return (
-        <div>Messages
+        <div>
             <Wrapper>
                 <SideNavBar>
                     <MessagesMenuItem to={`/Messages/Inbox`}>Inbox</MessagesMenuItem>

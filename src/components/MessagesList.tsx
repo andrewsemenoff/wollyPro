@@ -1,19 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import { messages } from '../utils/constants'
 import CompactMessage from './CompactMessage'
 
 const MessagesWrapper = styled.div`
- 
+margin-left: 1em;
+  display: flex ;
+  /* flex-direction: column ; */
+  gap: .8em;
+  flex-wrap: wrap;
 `
 const MessagesList = () => {
   return (
 <MessagesWrapper>
-    <CompactMessage/>
-    <CompactMessage/>
-    <CompactMessage/>
-    <CompactMessage/>
-    <CompactMessage/>
-    <CompactMessage/>
+    {messages.map((m, index) => <CompactMessage key={index}  message= {m}/>)}
 </MessagesWrapper>
   )
 }

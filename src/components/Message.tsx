@@ -1,6 +1,7 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import { AuthorsArr } from '../utils/constants'
+import { AuthorsArr, messages, } from '../utils/constants'
 
 const MessageContainer = styled.div`
   display: flex;
@@ -68,18 +69,23 @@ const Button = styled.div`
     }
 `
 const Message = () => {
+    const {messageID} = useParams();
+    
+    const messageIndex = messages.findIndex(m => m.id === +messageID!)
+    console.log(messageIndex);
+    const message = messages[messageIndex];
+    const authorIndex = AuthorsArr.findIndex(a => a.id === message.authorID)
+    const author = AuthorsArr[authorIndex];
     return (
         <MessageContainer>
             <TextAndAvatarWrapper>
 
                 <MessageTextWrapper>
-                    <ContactName>Jean Lao</ContactName>
-                    <MessageTitle>Friendship Rings: Silver, smoky quartz</MessageTitle>
-                    <Text>
-                        Hi, Glad to receive your order. Is your address correct? May I have your telephone number? Some packages require a telephone number so that the post office can deliver them. Thank you. Jean
-                    </Text>
+                    <ContactName>{author.firstName}</ContactName>
+                    <MessageTitle>{message.title}</MessageTitle>
+                    <Text>{message.text}</Text>
                 </MessageTextWrapper>
-                <SquareContactAvatar src={AuthorsArr[3].image} />
+                <SquareContactAvatar src={author.image} />
             </TextAndAvatarWrapper>
             <ButtonsWrapper>
                 <Button>Delete</Button>
